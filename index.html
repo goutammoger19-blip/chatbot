@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Vision Gallery</title>
+    <meta
+      name="description"
+      content="A modern gallery showcasing AI-generated and visually enhanced imagery."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="AI Vision Gallery home">
+          <span class="brand-mark">AI</span>
+          <span>Vision Gallery</span>
+        </div>
+
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#gallery">Gallery</a>
+          <a href="collections.html">Collections</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <a class="primary-btn" href="collections.html">Explore</a>
+      </header>
+
+      <main>
+        <section class="hero reveal">
+          <div class="hero-copy reveal-item">
+            <p class="eyebrow">Creative AI portfolio</p>
+            <h1>See the world through machine vision.</h1>
+            <p class="lead">
+              Curated imagery, cinematic concepts, and AI-enhanced compositions
+              designed to inspire ideas, storytelling, and visual exploration.
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-btn" href="#gallery">Browse gallery</a>
+              <a class="secondary-btn" href="#about">Learn more</a>
+            </div>
+
+            <div class="stats" aria-label="Gallery statistics">
+              <div>
+                <strong>240+</strong>
+                <span>AI frames</span>
+              </div>
+              <div>
+                <strong>18</strong>
+                <span>collections</span>
+              </div>
+              <div>
+                <strong>4.9/5</strong>
+                <span>curation score</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal-item" aria-label="Featured art preview">
+            <div class="visual-card large-card">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                alt="Abstract futuristic artwork"
+              />
+            </div>
+            <div class="visual-card small-card card-top">
+              <img
+                src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80"
+                alt="Neon city lights"
+              />
+            </div>
+            <div class="visual-card small-card card-bottom">
+              <img
+                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
+                alt="Mountain landscape"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery-section reveal" id="gallery">
+          <div class="section-head reveal-item">
+            <div>
+              <p class="eyebrow">Curated archive</p>
+              <h2>Featured visual stories</h2>
+            </div>
+            <div class="toolbar" aria-label="Gallery filters and search">
+              <label class="search-box" for="searchInput">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M10.5 3a7.5 7.5 0 015.97 12.8l3.95 3.95 1.41-1.41-3.95-3.95A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.01 9.4A5.5 5.5 0 0010.5 5z"
+                  />
+                </svg>
+                <input id="searchInput" type="search" placeholder="Search concepts" />
+              </label>
+            </div>
+          </div>
+
+          <div class="filter-row" id="filterRow" aria-label="Filter gallery by category">
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="nature" type="button">Nature</button>
+            <button class="filter-btn" data-filter="city" type="button">City</button>
+            <button class="filter-btn" data-filter="abstract" type="button">Abstract</button>
+            <button class="filter-btn" data-filter="portrait" type="button">Portrait</button>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+        </section>
+
+        <section class="about-section reveal" id="about">
+          <div class="about-panel reveal-item">
+            <p class="eyebrow">About the collection</p>
+            <h3>Built for creators, researchers, and visual storytellers.</h3>
+            <p>
+              AI Vision Gallery blends advanced image generation, cinematic color
+              grading, and design-first composition to create a striking archive of
+              inspiration.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close image view">
+        ×
+      </button>
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Expanded gallery item" />
+        <div class="lightbox-meta">
+          <span id="lightboxCategory">Category</span>
+          <h3 id="lightboxTitle">Title</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
